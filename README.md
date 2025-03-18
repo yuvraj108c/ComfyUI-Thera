@@ -7,12 +7,13 @@
 
 This project is an unofficial ComfyUI implementation of [Thera](https://github.com/prs-eth/thera) (Aliasing-Free Arbitrary-Scale Super-Resolution with Neural Heat Fields)
 
-<img height="500" src="" />
+<img height="500" src="https://github.com/user-attachments/assets/6d25c4d5-7f15-4e69-93c7-c0c9b036261c" />
 
 </div>
 
+
 ## Installation
-Navigate to the ComfyUI `/custom_nodes` directory
+Navigate to `/ComfyUI/custom_nodes` directory
 ```bash
 git clone https://github.com/yuvraj108c/ComfyUI-Thera
 cd ComfyUI-Thera
