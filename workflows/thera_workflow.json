@@ -1,0 +1,185 @@
+{
+  "last_node_id": 10,
+  "last_link_id": 18,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadTheraModel",
+      "pos": [
+        -550.7990112304688,
+        292.0552673339844
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "thera_pipe",
+          "type": "THERA_PIPE",
+          "links": [
+            16
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadTheraModel"
+      },
+      "widgets_values": [
+        "thera-edsr-pro"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        -499.88818359375,
+        415.6524963378906
+      ],
+      "size": [
+        210,
+        264.30078125
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "bird.png",
+        "image"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "TheraProcess",
+      "pos": [
+        -200.1612091064453,
+        377.0112609863281
+      ],
+      "size": [
+        315,
+        126
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "thera_pipe",
+          "type": "THERA_PIPE",
+          "link": 16
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            18
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TheraProcess"
+      },
+      "widgets_values": [
+        4,
+        "256",
+        false
+      ]
+    },
+    {
+      "id": 6,
+      "type": "PreviewImage",
+      "pos": [
+        176.45603942871094,
+        259.0028991699219
+      ],
+      "size": [
+        376.1632080078125,
+        420.1371154785156
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      16,
+      1,
+      0,
+      9,
+      0,
+      "THERA_PIPE"
+    ],
+    [
+      17,
+      10,
+      0,
+      9,
+      1,
+      "IMAGE"
+    ],
+    [
+      18,
+      9,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2390754470600347,
+      "offset": [
+        748.035390218099,
+        -103.0063358394579
+      ]
+    }
+  },
+  "version": 0.4
+}
