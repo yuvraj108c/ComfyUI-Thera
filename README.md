@@ -7,7 +7,7 @@
 
 This project is an unofficial ComfyUI implementation of [Thera](https://github.com/prs-eth/thera) (Aliasing-Free Arbitrary-Scale Super-Resolution with Neural Heat Fields)
 
-<img height="500" src="https://github.com/user-attachments/assets/6d25c4d5-7f15-4e69-93c7-c0c9b036261c" />
+<img height="350" src="https://github.com/user-attachments/assets/6d25c4d5-7f15-4e69-93c7-c0c9b036261c" />
 
 </div>
 
