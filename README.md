@@ -21,6 +21,7 @@ pip install -r requirements.txt
 
 ## Usage
 - Load example workflow
+- Models will be autodownloaded to `/ComfyUI/models/Thera`
 
 ## Citation
 
