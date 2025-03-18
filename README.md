@@ -34,3 +34,5 @@ pip install -r requirements.txt
   year={2025}
 }
 ```
+## Acknowledgments
+Thanks to [simplepod.ai](https://simplepod.ai/) for providing GPU servers
