@@ -6,7 +6,7 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-     "LoadTheraModel" : "Load InvSR Models",
+     "LoadTheraModel" : "Load Thera Models",
      "TheraProcess" : "Thera Process"
 }
 
