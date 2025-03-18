@@ -1,4 +1,4 @@
-jax[cuda12]
+jax[cuda]
 flax
 jaxtyping
 jaxlib
