@@ -27,6 +27,19 @@ class LoadTheraModel:
     def loadmodel(self, model):
         from .thera.model import build_thera
 
+        # The prs-eth .pkl weights were pickled with an older JAX whose ShapedArray
+        # carried a `named_shape` field, removed in current JAX. Strip the defunct
+        # field while reconstructing array avals so the checkpoints load on modern
+        # JAX. Guarded so repeated loads don't stack wrappers.
+        import jax._src.core as _jax_core
+        if not getattr(_jax_core.ShapedArray.update, "_thera_named_shape_patch", False):
+            _orig_update = _jax_core.ShapedArray.update
+            def _update_drop_named_shape(self, **kwargs):
+                kwargs.pop("named_shape", None)
+                return _orig_update(self, **kwargs)
+            _update_drop_named_shape._thera_named_shape_patch = True
+            _jax_core.ShapedArray.update = _update_drop_named_shape
+
         thera_models_dir = os.path.join(folder_paths.models_dir, "thera")
         os.makedirs(thera_models_dir, exist_ok=True)
         thera_model_path = os.path.join(thera_models_dir, f"{model}.pkl")
