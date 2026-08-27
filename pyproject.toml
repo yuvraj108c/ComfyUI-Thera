@@ -1,0 +1,15 @@
+[project]
+name = "thera"
+description = "This project is an unofficial ComfyUI implementation of [a/Thera](https://github.com/prs-eth/thera) (Aliasing-Free Arbitrary-Scale Super-Resolution with Neural Heat Fields)"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["jax[cuda]", "flax", "jaxtyping", "jaxlib"]
+
+[project.urls]
+Repository = "https://github.com/yuvraj108c/ComfyUI-Thera"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Thera"
+Icon = ""
